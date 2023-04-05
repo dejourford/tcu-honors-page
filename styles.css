@@ -13,7 +13,7 @@ body {
 }
 
 :root {
-    --main-color: #71518D;
+    --main-color: #5a2a82;
     --small-font-weight: 100;
     --medium-font-weight: 400;
     --bold-font-weight: 700;
@@ -26,6 +26,14 @@ li {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+h1 {
+    font-weight: var(--bold-font-weight);
+}
+
+h2, h3, h4 {
+    font-weight: var(--medium-font-weight);
 }
 
 /* MOBILE NAVIGATION */
@@ -51,14 +59,14 @@ a {
     position: absolute;
     top: 0;
     z-index: 999999;
-    transition: 0.3s ease-in-out;
+    transition: 0.3s ease;
 }
 
 .close {
     position: absolute;
     top: -2000px;
     z-index: 99999;
-    transition: 0.5s ease-in-out;
+    transition: 0.5s ease;
 }
 
 .mobile-links {
@@ -92,6 +100,7 @@ a {
 /* MAIN NAVIGATION */
 #logo {
     width: 70px;
+    cursor: pointer;
 }
 
 .main-nav {
@@ -100,6 +109,7 @@ a {
     align-items: center;
     justify-content: space-between;
     background: var(--main-color);
+    color: white;
 }
 
 .main-links {
@@ -120,17 +130,173 @@ a {
 }
 
 
-/* MAIN SECTION */
-main {
-    position: relative;
+
+/* HERO SECTION */
+.hero {
+    padding: 1em 0em;
 }
 
-#hero-image {
+.hero-header {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+#honors-logo {
+    height: 10em;
+    padding: 1em;
+}
+
+/* HERO NAVIGATION */
+.hero-navigation {
+    /* background: #e5e3e7; */
+    background: white;
+    position: absolute;
+    z-index: 9999;
     width: 100%;
+    padding: 0.5em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+
+}
+
+.dropbtn {
+    
+    outline: none;
+    color: black;
+    padding: 1em;
+    border: none;
+    
+}
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: ;
+    
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    /* width: 100%; */
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+  
+.dropdown-content a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+    color: white;
+}
+  
+.dropdown:hover .dropbtn {
+    background-color: var(--main-color);
+    color: white;
+}
+
+
+/* HERO IMAGE */
+#honors-image {
+    width: 100%;
+    padding: 1em 0em;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+
+
+.hero-text {
+    background: var(--main-color);
+    width: 100%;
+    margin: 0 auto;
+    color: white;
+    font-weight: var(--small-font-weight);
+    text-align: center;
+    padding: 1em 0em;
+    text-transform: uppercase;
+}
+
+.hero-text:hover {
+    background: white;
+    color: var(--main-color);
+    border: 3px solid #5a2a82;
+}
+
+/* EVENTS SECTION */
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.card-features {
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 10px 20px rgb(0, 0, 0, 0.2);
+    padding: 2em;
+    gap: 1em;
+    border-radius: 1em;
+}
+
+h3 {
+    font-weight: var(--bold-font-weight);
+    font-size: 1.5rem;
+}
+
+.card-text {
+    font-weight: var(--small-font-weight);
+    font-size: 1.2rem;
+    padding: 1em 0em;
+}
+.cardBtn {
+    font-size: 1.5rem;
+    padding: 0.5em;
+    text-transform: uppercase;
+    background: var(--main-color);
+    color: white;
+    border: none;
+    letter-spacing: 0.2rem;
+}
+
+.cardBtn:hover {
+    background: white;
+    color: black;
+    border: 3px solid #5a2a82;
+    cursor: pointer;
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1020px) {
     .fa-bars {
         display: block;
     }
@@ -138,4 +304,33 @@ main {
     .main-links {
         display: none;
     }
+
+    .hero-navigation {
+        display: none;
+    }
 }
+
+
+@media screen and (max-width:1154px) {
+    .card-features {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .card-features {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* @media screen and (max-width:1292px) {
+    .card-features {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+    }
+} */
