@@ -12,36 +12,50 @@
 <body>
     <div class="content">
         <header>
-            <nav>
-                <section id="main-nav">
-                    <div class="main-nav-left">
-                        <img id="logo" class="active-logo" src="images/tcu-logo.svg" alt="">
-                    </div>
-
-                    <div class="main-nav-right">
-                        <ul class="main-links">
-                            <a id="admission" href="#"><li>Admission |</li></a>
-                            <a id="registrar" href="#"><li>Registrar |</li></a>
-                            <a id="financial-aid" href="#"><li>Financial Aid |</li></a>
-                            <a id="student-affairs" href="#"><li>Student Affairs</li></a>
-                        </ul>
-                        <a href="#"><li><i class="fa-solid fa-bars" onclick="showMenu()"></i></li></a>
-                    </div>
-                </section>
-
-                <section id="mobile-nav" class="inactive-nav">
-                    <ul class="mobile-links">
-                        <a id="about" href="#"><li>About</li></a>
-                        <a href="#"><li>News and Events</li></a>
-                        <a href="#"><li>Prospective Students</li></a>
-                        <a href="#"><li>Current Students</li></a>
-                        <a href="#"><li>Faculty & Staff</li></a>
-                        <a href="#"><li>Alumni & Friends</li></a>
+            
+    
+            <nav class="main-nav">
+                <div class="main-nav-left">
+                    <img id="logo" src="images/tcu-logo.svg" alt="">
+                </div>
+    
+                <div class="main-nav-right">
+                    <ul class="main-links">
+                        <li><a href="">Admission</a></li>
+                        <span>|</span>
+                        <li><a href="">Registrar</a></li>
+                        <span>|</span>
+                        <li><a href="">Financial Aid</a></li>
+                        <span>|</span>
+                        <li><a href="">Student Affairs</a></li>
+                        
                     </ul>
-                    <img id="mobile-logo" src="images/tcu-logo.svg" alt="">
-                </section>
+                    
+                </div>
+                <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+            <nav class="mobile-nav close">
+                <ul class="mobile-links">
+                    <li><a href="">about</a></li>
+                    <li><a href="">news and events</a></li>
+                    <li><a href="">prospective students</a></li>
+                    <li><a href="">current students</a></li>
+                    <li><a href="">faculty & staff</a></li>
+                    <li><a href="">alumni & friends</a></li>
+                </ul>  
+                <img id="nav-logo" src="images/tcu-logo.svg" alt="">  
+                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>  
             </nav>
         </header>
+        
+        <main>
+            <article>
+                <img id="hero-image" src="images/honors-hero-image.png" alt="">
+            </article>
+        </main>
+        
+            
     </div>
     
 <script src="main.js"></script>
